@@ -29,21 +29,14 @@ filegroup(
         "*.bzl",
         "*.py",
     ]),
-    visibility = [
-        "//distro:__pkg__",
-        "//pkg:__pkg__",
-    ],
+    visibility = ["//visibility:public"],
 )
 
 exports_files(
     glob([
         "*.bzl",
     ]),
-    visibility = [
-        "//distro:__pkg__",
-        "//doc_build:__pkg__",
-        "//pkg:__pkg__",
-    ],
+    visibility = ["//visibility:public"],
 )
 
 # pkg_install's template script file
@@ -66,10 +59,7 @@ py_library(
         "build_info.py",
     ],
     srcs_version = "PY3",
-    visibility = [
-        "//:__subpackages__",
-        "//tests:__pkg__",
-    ],
+    visibility = ["//visibility:public"],
 )
 
 py_library(
@@ -79,10 +69,7 @@ py_library(
         "archive.py",
     ],
     srcs_version = "PY3",
-    visibility = [
-        "//:__subpackages__",
-        "//tests:__subpackages__",
-    ],
+    visibility = ["//visibility:public"],
 )
 
 py_library(
@@ -92,10 +79,7 @@ py_library(
         "helpers.py",
     ],
     srcs_version = "PY3",
-    visibility = [
-        "//:__subpackages__",
-        "//tests:__pkg__",
-    ],
+    visibility = ["//visibility:public"],
 )
 
 py_library(
